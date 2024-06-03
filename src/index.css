@@ -6,10 +6,11 @@
     font-weight: 300;
 }
 
-#link {
-    text-decoration: none;
-    color: white;
-
+#søkefelt {
+    margin: 0 auto;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 .header {
     background-color: #005850;
@@ -20,4 +21,20 @@
     text-align: center;
     font-size: 1rem;
     color: white;
+}
+.search-box {
+    display: flex;
+    text-align: center;
+}
+.box{
+    border: black solid 1px;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+}
+.utlån {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
