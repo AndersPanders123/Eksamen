@@ -32,9 +32,26 @@
     display: flex;
     flex-direction: column;
     padding: 1vw;
+    margin: 0.2vw;
 }
 .utlån {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.Kategori {
+    color: #005850;
+    font-weight: bold;
+}
+#lånKnapp {
+    background-color: #005850;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#lånKnapp:hover {
+    background-color: #003d3d;
 }
