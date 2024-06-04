@@ -8,12 +8,14 @@ function Jsn({ data }: { data: InventoryItem[] | null }) {
       localStorage.setItem(
         name,
         JSON.stringify({
-          name: name,
-          tlf: tlf,
-          device: deviceName,
+          Navn: name,
+          Telefon: tlf,
+          Objekt: deviceName,
+          Kategori: data?.find((item) => item.Produsent === deviceName)?.Kategori,
+          Beskrivelse: data?.find((item) => item.Produsent === deviceName)?.Beskrivelse,
         })
       );
-      alert("Du har lånt !");
+      alert(`Du har lånt ${deviceName}!`);
     }
   };
 

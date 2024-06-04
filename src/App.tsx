@@ -3,6 +3,7 @@ import Header from "./components/header";
 import Jsn from "./components/json";
 import { InventoryItem } from "./types/inventory";
 import SearchBox from "./components/searchBox";
+import GetLocalStorage from "./components/getLocalStorage";
 
 function App() {
   const [data, setData] = useState<InventoryItem[] | null>(null);
@@ -25,8 +26,17 @@ function App() {
   return (
     <div>
       <Header />
-      <SearchBox data={data} setData={setFilteredData} />
-      <Jsn data={filteredData} />
+      <div>
+        <div className="container">
+          <div className="neger">
+            <SearchBox data={data} setData={setFilteredData} />
+            <Jsn data={filteredData} />
+          </div>
+          <div className="sigma">
+            <GetLocalStorage />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

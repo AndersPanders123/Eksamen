@@ -3,6 +3,7 @@ function Header() {
     <div>
       <div className="header">
       </div>
+      <h1>Utlån av utstyr</h1>
     </div>
   );
 }

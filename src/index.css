@@ -1,38 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
-
+body{
+    overflow-x: hidden;
+}
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+.container {
+    display: flex;
+    justify-content: end;
+}
+.neger{
+    width: 100%;
+    margin-right: -424px; 
+}
+.sigma{
+    margin-top: 5.5rem;
+    margin-right: 5rem;
+}
+.lånt {
+  background-color: #cfd2d3;
+  border: #005850 solid 1px;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin: 1rem;
+}
+.removeKnapp {
+  background-color: #005850;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.removeKnapp:hover {
+    background-color: #003d3d;
+  }
 #søkefelt {
-    margin: 0 auto;
-    font-size: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+  margin: 0 auto;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .header {
-    background-color: #005850;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0.7rem;
-    padding-right: 1rem;
-    text-align: center;
-    font-size: 1rem;
-    color: white;
+  background-color: #005850;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.7rem;
+  padding-right: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
 }
 .search-box {
-    display: flex;
-    text-align: center;
+  display: flex;
+  text-align: center;
 }
-.box{
-    border: black solid 1px;
-    width: 30rem;
-    display: flex;
-    flex-direction: column;
-    padding: 1vw;
-    margin: 0.2vw;
+.box {
+  border: black solid 1px;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+  margin: 0.2vw;
 }
 .utlån {
   display: flex;
@@ -40,18 +78,18 @@
   align-items: center;
 }
 .Kategori {
-    color: #005850;
-    font-weight: bold;
+  color: #005850;
+  font-weight: bold;
 }
 #lånKnapp {
-    background-color: #005850;
-    color: white;
-    border: none;
-    padding: 0.5rem;
-    margin-top: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #005850;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 #lånKnapp:hover {
-    background-color: #003d3d;
+  background-color: #003d3d;
 }
