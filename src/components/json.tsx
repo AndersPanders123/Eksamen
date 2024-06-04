@@ -1,10 +1,20 @@
 import { InventoryItem } from "../types/inventory";
 
 function Jsn({ data }: { data: InventoryItem[] | null }) {
-  const handleButtonClick = () => {
-    const name = prompt('Skriv inn navnet ditt:');
-    alert('Du har lånt !');
-    console.log(name); 
+  const handleButtonClick = (deviceName: string) => {
+    const name = prompt("Skriv inn navnet ditt:");
+    const tlf = prompt("Skriv inn telefonnummeret ditt:");
+    if (name && tlf) {
+      localStorage.setItem(
+        name,
+        JSON.stringify({
+          name: name,
+          tlf: tlf,
+          device: deviceName,
+        })
+      );
+      alert("Du har lånt !");
+    }
   };
 
   return (
@@ -17,11 +27,26 @@ function Jsn({ data }: { data: InventoryItem[] | null }) {
             <div key={index} className="box">
               <h2>{item.Produsent}</h2>
               <div>
-                <p><span className="Kategori">Kategori: </span>{item.Kategori}</p>
-                <p><span className="Kategori">Beskrivelse: </span>{item.Beskrivelse}</p>
-                <p><span className="Kategori">Spesifikasjoner: </span>{item.Spesifikasjoner}</p>
+                <p>
+                  <span className="Kategori">Kategori: </span>
+                  {item.Kategori}
+                </p>
+                <p>
+                  <span className="Kategori">Beskrivelse: </span>
+                  {item.Beskrivelse}
+                </p>
+                <p>
+                  <span className="Kategori">Spesifikasjoner: </span>
+                  {item.Spesifikasjoner}
+                </p>
               </div>
-              <button type="button" id="lånKnapp" onClick={handleButtonClick}>Lån</button>
+              <button
+                type="button"
+                id="lånKnapp"
+                onClick={() => handleButtonClick(item.Produsent)}
+              >
+                Lån
+              </button>
             </div>
           );
         })}
