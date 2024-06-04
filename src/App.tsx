@@ -28,7 +28,7 @@ function App() {
       <Header />
       <div>
         <div className="container">
-          <div className="neger">
+          <div className="bok">
             <SearchBox data={data} setData={setFilteredData} />
             <Jsn data={filteredData} />
           </div>
