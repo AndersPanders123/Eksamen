@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 interface LoginInfo {
   username: string;
@@ -11,25 +11,29 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
 
-  useEffect(() => {
-    fetch("/path/to/your/innlogging.json")
-      .then((response) => response.json())
-      .then((data: LoginInfo) => {
-        setUsername(data.username);
-        setPassword(data.password);
-        setPhoneNumber(data.phoneNumber);
-      });
-  }, []);
+  // Hardcoded credentials for the purpose of this example
+  const credentials: LoginInfo = {
+    username: "admin",
+    password: "password",
+    phoneNumber: "1234567890",
+  };
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    // Perform login logic here
-    console.log(
-      `Logging with username: ${username}, password: ${password}, and phone number: ${phoneNumber}`
-    );
 
-    // Store user information in local storage
-    localStorage.setItem("user", JSON.stringify({ username, phoneNumber }));
+    // Check if entered username and password match the hardcoded credentials
+    if (
+      username === credentials.username &&
+      password === credentials.password
+    ) {
+      alert("Innlogging vellykket!");
+      console.log(
+        `Logging with username: ${username}, password: ${password}, and phone number: ${phoneNumber}`
+      );
+
+      // Store user information in local storage
+      localStorage.setItem("user", JSON.stringify({ username, phoneNumber }));
+    }
   };
 
   return (
