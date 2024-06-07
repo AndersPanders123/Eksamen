@@ -4,6 +4,8 @@ import Jsn from "./components/json";
 import { InventoryItem } from "./types/inventory";
 import SearchBox from "./components/searchBox";
 import GetLocalStorage from "./components/getLocalStorage";
+import Lånt from "./components/lånt";
+import Login from "./components/login";
 
 function App() {
   const [data, setData] = useState<InventoryItem[] | null>(null);
@@ -26,13 +28,19 @@ function App() {
   return (
     <div>
       <Header />
+      <Login />
       <div>
         <div className="container">
-          <div className="bok">
-            <SearchBox data={data} setData={setFilteredData} />
+          <div className="søkjson">
+            <div id="søkefelt">
+              <SearchBox data={data} setData={setFilteredData} />
+            </div>
             <Jsn data={filteredData} />
           </div>
           <div className="sigma">
+            <div>
+              <Lånt />
+            </div>
             <GetLocalStorage />
           </div>
         </div>

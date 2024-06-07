@@ -12,25 +12,38 @@ h1 {
   font-size: 3rem;
   text-align: center;
 }
+.text {
+  font-size: 2rem;
+  text-align: center;
+  border: #005850 solid 1px;
+  width: 100%;
+  margin-right: 4rem;
+}
 .container {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
 }
-.bok {
-    width: 100%;
-    margin-right: -424px; 
+.flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 .sigma{
-    margin-top: 5.5rem;
-    margin-right: 5rem;
+    margin-top: 4.3rem;
+    margin-right: 20vw;
+    width: 20vw;
+}
+.søkjson {
+    margin-left: 20vw;
 }
 .lånt {
-  background-color: #cfd2d3;
-  border: #005850 solid 1px;
-  color: black;
-  padding: 0.5rem;
-  border-radius: 5px;
-  margin: 1rem;
+  border: black solid 1px;
+  width: 20vw;
+  height: 18vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+  margin: 0.2vw;
 }
 .removeKnapp {
   background-color: #005850;
@@ -45,10 +58,11 @@ h1 {
     background-color: #003d3d;
   }
 #søkefelt {
-  margin: 0 auto;
   font-size: 2rem;
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 .header {
   background-color: #005850;
@@ -66,7 +80,8 @@ h1 {
 }
 .box {
   border: black solid 1px;
-  width: 30rem;
+  width: 20vw;
+  height: 18vh;
   display: flex;
   flex-direction: column;
   padding: 1vw;
@@ -92,4 +107,11 @@ h1 {
 }
 #lånKnapp:hover {
   background-color: #003d3d;
+}
+
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
 }

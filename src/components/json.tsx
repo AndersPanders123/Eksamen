@@ -2,8 +2,8 @@ import { InventoryItem } from "../types/inventory";
 
 function Jsn({ data }: { data: InventoryItem[] | null }) {
   const handleButtonClick = (deviceName: string) => {
-    const name = prompt("Skriv inn navnet ditt:");
-    const tlf = prompt("Skriv inn telefonnummeret ditt:");
+    const name = prompt("Skriv inn navnet ditt");
+    const tlf = prompt("Skriv inn telefonnummeret ditt");
     if (name && tlf) {
       localStorage.setItem(
         name,
@@ -11,8 +11,10 @@ function Jsn({ data }: { data: InventoryItem[] | null }) {
           Navn: name,
           Telefon: tlf,
           Objekt: deviceName,
-          Kategori: data?.find((item) => item.Produsent === deviceName)?.Kategori,
-          Beskrivelse: data?.find((item) => item.Produsent === deviceName)?.Beskrivelse,
+          Kategori: data?.find((item) => item.Produsent === deviceName)
+            ?.Kategori,
+          Beskrivelse: data?.find((item) => item.Produsent === deviceName)
+            ?.Beskrivelse,
         })
       );
       alert(`Du har lånt ${deviceName}!`);
